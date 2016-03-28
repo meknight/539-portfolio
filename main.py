@@ -28,38 +28,40 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('templates/index.html')
-    	self.response.write(template.render({'title': 'Home'}))
-
-    def family(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/family.html')
-    	self.response.write(template.render({'title': 'Family'}))
+    	self.response.write(template.render({'title': 'Work'}))
+    def about(self):
+        template = JINJA_ENVIRONMENT.get_template('templates/about.html')
+    	self.response.write(template.render({'title': 'About'}))
     def fun(self):
         template = JINJA_ENVIRONMENT.get_template('templates/fun.html')
     	self.response.write(template.render({'title': 'Fun'}))
+    def contact(self):
+        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+        self.response.write(template.render({'title': 'Contact'}))
 
 
 # login page with separate handler
-class LoginHandler(webapp2.RequestHandler):
-    def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-    	self.response.write(template.render({'title': 'Login'}))
-    def post(self):
-    	in_username = self.request.get('name')
-    	in_password = self.request.get('pw')
+# class LoginHandler(webapp2.RequestHandler):
+#     def get(self):
+#         template = JINJA_ENVIRONMENT.get_template('templates/login.html')
+#     	self.response.write(template.render({'title': 'Login'}))
+#     def post(self):
+#     	in_username = self.request.get('name')
+#     	in_password = self.request.get('pw')
 
-    	username = 'Colleen'
-    	password = 'pass'
+#     	username = 'Colleen'
+#     	password = 'pass'
 
-    	if in_username == username and in_password == password:
-    		template = JINJA_ENVIRONMENT.get_template('templates/welcome.html')
-    		self.response.write(template.render({'title': 'Welcome'}))
-    		logging.info(in_username)
-    		logging.info(in_password)
-    	else:
-    		template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-    		self.response.write(template.render({'title': 'Login', 'incorrect': 'Bad credentials. Try again.'}))
-    		logging.info('Incorrect username: %s', in_username)
-    		logging.info('Incorrect password: %s', in_password)
+#     	if in_username == username and in_password == password:
+#     		template = JINJA_ENVIRONMENT.get_template('templates/welcome.html')
+#     		self.response.write(template.render({'title': 'Welcome'}))
+#     		logging.info(in_username)
+#     		logging.info(in_password)
+#     	else:
+#     		template = JINJA_ENVIRONMENT.get_template('templates/login.html')
+#     		self.response.write(template.render({'title': 'Login', 'incorrect': 'Bad credentials. Try again.'}))
+#     		logging.info('Incorrect username: %s', in_username)
+#     		logging.info('Incorrect password: %s', in_password)
 
 
     	
@@ -67,7 +69,8 @@ class LoginHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', IndexHandler),
     ('/index.html', IndexHandler),
-    webapp2.Route('/family.html', handler=IndexHandler, handler_method='family'),
+    webapp2.Route('/about.html', handler=IndexHandler, handler_method='about'),
     webapp2.Route('/fun.html', handler=IndexHandler, handler_method='fun'),
-    ('/login.html', LoginHandler)
+    webapp2.Route('/contact.html', handler=IndexHandler, handler_method='contact'),
+    # ('/login.html', LoginHandler)
 ], debug=True)

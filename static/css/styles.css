@@ -1,9 +1,7 @@
 /*
-center text in jumbotron
-how to make active navigation link
-sticky footer and margin top
-jumbotron:after under h1;
-GitHub
+does contact page or work page count as text
+footer makes scroll
+header the same across all pages?
 */
 
 
@@ -15,45 +13,188 @@ html,
 body {
     height: 100%;
     position: relative;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
 }
+
+
+
+
 
 /*Navigation*/
 .navbar {
     background-color: #fff;
     border-bottom: none;
 }
+.navbar-default {
+    background-color: #26ADBF;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    /*color: #ff9999;*/
+    color: #26ADBF;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fed136;
+}
+.navbar-default .navbar-nav>li>a {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+.navbar .navbar-brand {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:active {
+    color: #fed136;
+    /*color: #33cccc;*/
+}
+.navbar-default .navbar-toggle {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+    background-color: #fed136;
+}
 
 
-/*Jumbotron*/
+/*Divider*/
+span.divider {
+  display: block;
+  margin: 25px 0px 30px;
+  width: 150px;
+  height: 2px;
+  background-color: #fed136;
+}
+span.divider.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+/*Jumbotron Header*/ 
 .jumbotron {
-    height: 75%;
+    height: 550px;
     position: relative;
-    background-image: url('../images/banner.jpg');
-    position: relative;
+    /*background-image: url('../images/banner.jpg');*/
+    opacity: 1;
+    background: -moz-linear-gradient(top,  rgba(38,173,191,1) 1%, rgba(54,175,198,1) 19%, rgba(125,185,232,0) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(38,173,191,1) 1%,rgba(54,175,198,1) 19%,rgba(125,185,232,0) 100%); 
+    background: linear-gradient(to bottom,  rgba(38,173,191,1) 1%,rgba(54,175,198,1) 19%,rgba(125,185,232,0) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26adbf', endColorstr='#007db9e8',GradientType=0 ); 
 }
+
 .jumbotron .container {
-    position: absolute;
-    top: 40%;
+    color: #fff;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-top: 150px;
     text-align: center;
+    z-index: 1000;
+    position: relative;
 }
-.jumbotron:after {
+.jumbotron .container h1 {
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+}
+.jumbotron .container h1 span {
+    font-weight: 300;
+    color: #fff;
+}
+.jumbotron .container h3 {
+    font-weight: 400;
+}
+/*.jumbotron:after {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); 
     content: "";
+}*/
+
+
+
+/*Page content*/
+a {
+    color: #72aa00;
 }
-.jumbotron h1 {
-    color: #fff;
-    z-index: 1;
+a:hover,
+a:focus,
+a:active {
+    color: #fed136;
+    text-decoration: none;
 }
+.title h2{
+    text-align: center;
+    margin-top: 50px;
+}
+p.description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+header h2 {
+    text-align: center;
+}
+.top-push {
+    margin-top: 50px;
+}
+.fun img,
+.bottom-push {
+    margin-bottom: 25px;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+/*About page*/
+.about {
+    margin-bottom: 0;
+}
+.about-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.about img {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
 
 
 /*Carousel*/
 .carousel {
-    height:75%;
+    height:500px;
+    margin-bottom: 30px;
 }
 .item,
 .active,
@@ -74,154 +215,335 @@ body {
 }
 
 
+
+
+
 /*Portfolio thumbnails*/
 .portfolio-item {
     margin-bottom: 25px;
 }
-
-.grid {
-    /*position: relative;*/
-    /*margin: 0 auto;*/
-    /*padding: 1em 0 4em;
-    max-width: 1000px;*/
-    list-style: none;
-    text-align: center;
+.portbox h2 {
+    margin:0;
+    font-size:17px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:20px 20px 5px 20px;
+    text-align:center;
 }
-
-/* Common style */
-.grid figure {
-    /*position: relative;*/
-    /*float: left;*/
-    overflow: hidden;
-    /*margin: 10px 1%;
-    min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;*/
-    background: #3085a3;
-    text-align: center;
-    cursor: pointer;
-}
-
-.grid figure img {
-    /*position: relative;*/
-    /*display: block;*/
-    min-height: 100%;
-    max-width: 100%;
-    opacity: 0.8;
-}
-
-.grid figure figcaption {
-    padding: 2em;
+.portbox h3 {
+    margin:0;
+    padding:0px 20px 15px 20px;
+    text-transform:uppercase;
+    font-weight:300;
+    text-align:center;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 1.25em;
+}
+.portfolio-box img,.port-thumb img {
+    width:100%;
+}
+.overlay-image {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    background:#72aa00;
+}
+.port-zoom-link h3 {
+    width:100%;
+}
+.overlay-image .mask,.overlay-image .content {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0
+}
+.view-overlay img {
+    -webkit-transform:scaleY(1);
+    -moz-transform:scaleY(1);
+    -o-transform:scaleY(1);
+    -ms-transform:scaleY(1);
+    transform:scaleY(1);
+    -webkit-transition:all .7s ease-in-out;
+    -moz-transition:all .7s ease-in-out;
+    -o-transition:all .7s ease-in-out;
+    -ms-transition:all .7s ease-in-out;
+    transition:all .7s ease-in-out
+}
+.view-overlay .mask {
+    -webkit-transition:all .5s linear;
+    -moz-transition:all .5s linear;
+    -o-transition:all .5s linear;
+    -ms-transition:all .5s linear;
+    transition:all .5s linear;
+    -ms-filter:"alpha(opacity=0)";
+    filter:alpha(opacity=0);
+    opacity:0
+}
+.port-zoom-link {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    padding:0 20px;
+    align-items:center;
+    display:flex;
+}
+.port-zoom-link h3 {
+    /*font-weight: 400;*/
+}
+.view-overlay:hover img {
+    -webkit-transform:scale(10);
+    -moz-transform:scale(10);
+    -o-transform:scale(10);
+    -ms-transform:scale(10);
+    transform:scale(10);
+    -ms-filter:"alpha(opacity=0)";
+    filter:alpha(opacity=0);
+    opacity:0
+}
+.view-overlay:hover .mask {
+    -ms-filter:"alpha(opacity=100)";
+    filter:alpha(opacity=100);
+    opacity: 1
+}
+
+
+/*Tilt effect*/
+.tilt {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-    pointer-events: none;
+.tilt__back {
+    position: relative;
 }
 
-.grid figure figcaption,
-.grid figure figcaption > a {
+.tilt__front {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
-    z-index: 1000;
-    text-indent: 200%;
-    white-space: nowrap;
-    font-size: 0;
-    opacity: 0;
+
+/*Isotope items*/
+.portfolio-filter a { 
+margin-right: 10px; 
+color:#333;
+text-decoration: none;
+padding: 3px;
+}
+.portfolio-filter a:hover { 
+    color: #fed136;
+}
+.portfolio-filter a.current { 
+    color: #26ADBF;
 }
 
-.grid figure h2 {
-    word-spacing: -0.15em;
-    font-weight: 300;
+.portfolio-filter {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.portfolio-container {
+}
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
 }
 
-.grid figure h2 span {
-    font-weight: 800;
+
+
+
+/*Contact section*/
+section#contact {
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+}
+section#contact .section-heading {
+  color: white;
+}
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+}
+section#contact .form-group input.form-control {
+  height: auto;
+}
+section#contact .form-group textarea.form-control {
+  height: 236px;
+}
+section#contact .form-control:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
+section#contact ::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+section#contact :-moz-placeholder {
+  /* Firefox 18- */
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+section#contact ::-moz-placeholder {
+  /* Firefox 19+ */
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+section#contact :-ms-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+section#contact .text-danger {
+  color: #e74c3c;
+}
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
-.grid figure h2,
-.grid figure p {
-    margin: 0;
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
-
-.grid figure p {
-    letter-spacing: 1px;
-    font-size: 68.5%;
-}
-
-figure.effect-milo {
-    background: #2e5d5a;
-}
-
-figure.effect-milo img {
-    max-width: none;
-    width: -webkit-calc(100% + 60px);
-    width: calc(100% + 60px);
-    opacity: 1;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-30px,0,0) scale(1.12);
-    transform: translate3d(-30px,0,0) scale(1.12);
+section button.submit {
+    background-color: #26ADBF;
+    color: #fff;
+    margin-bottom: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-figure.effect-milo:hover img {
-    opacity: 0.5;
-    -webkit-transform: translate3d(0,0,0) scale(1);
-    transform: translate3d(0,0,0) scale(1);
-}
-
-figure.effect-milo h2 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding: 1em 1.2em;
-}
-
-figure.effect-milo p {
-    padding: 0 10px 0 0;
-    width: 50%;
-    border-right: 1px solid #fff;
-    text-align: right;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-40px,0,0);
-    transform: translate3d(-40px,0,0);
-}
-
-figure.effect-milo:hover p {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+section button.submit:hover,
+section button.submit:active,
+section button.submit:focus {
+    background-color: #fed136;
+    color: #fff;
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
 }
 
 
 
 
-.footer {
-  /*position: absolute;
-  bottom: 0;
-  left: 0;*/
-  width: 100%;
-  height: 60px;
-  background-color: #f5f5f5;
+/*Footer*/
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
 }
-.footer p {
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+#footer {
+    background-color: #f5f5f5;
+    margin-top: 0px;
+}
+#footer p {
     margin: 20px 0;
 }
+
+
+/*Media queries*/
+@media (min-width:568px) {
+    section button.submit { 
+    background-color: #72aa00;
+    }  
+    .navbar-default {
+    background-color: #72aa00;
+    }
+    .portfolio-filter a.current { 
+    color: #72aa00;
+    }
+    .jumbotron {
+    background: rgb(114,170,0);
+    background: -moz-linear-gradient(top,  rgba(114,170,0,1) 13%, rgba(255,255,255,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(114,170,0,1) 13%,rgba(255,255,255,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(114,170,0,1) 13%,rgba(255,255,255,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72aa00', endColorstr='#ffffff',GradientType=0 );
+    }
+    .navbar-default .navbar-nav>.active>a, 
+    .navbar-default .navbar-nav>.active>a:focus, 
+    .navbar-default .navbar-nav>.active>a:hover {
+    color: #72aa00;
+    background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (min-width:992px) {
+    .about img {
+    margin-top: 0px;
+    }
+}
+
