@@ -2,22 +2,29 @@
 
 {% block content %} 
 
-<!-- Image Background Carousel Header -->
-    <header class="jumbotron">
-      	<div class="container">
-        	<h3>Hello</h3>
-        	<h1><span>I'm </span> Molly</h1>
-        	<!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
-      	</div>
+    <header>
+	    <div class="jumbotron">
+	      	<div class="container">
+	        	<h3>Hello</h3>
+	        	<h1><span>I'm </span> Molly</h1>
+	        	<!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+	        </div>
+	    </div>
+	    <div class="container">
+        	<div class="row title">
+        		<h2>My work</h2>
+	        	<span class="divider center"></span>
+	        </div>
+	    </div>
     </header>
 
 
     
 	<div class="container">
 	    <div class="row">
-	    	<div class="title col-md-12">
-	        	<h2>My Work</h2>
-	        	<span class="divider center"></span>
+	    	<div class="col-md-12">
+	        	<!-- <h2>My Work</h2>
+	        	<span class="divider center"></span> -->
 	        	<div class="portfolio-filter">
 	                <a href="#all" data-filter="*" class="current">All</a>
 	                <a href="#web" data-filter=".web">Web</a>
@@ -32,7 +39,7 @@
             <div class="portfolio-container">
 
 
-            	<div class="web col-md-4 col-sm-6 portfolio-item portbox">
+            	<div class="mobile col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/smatch.jpg" alt="Smatch App">
 	                    <a href="static/images/thumbnails/smatch.jpg" data-title="Smatch" data-lightbox="portfolio">
@@ -60,10 +67,10 @@
 						</a>
 	            	</div>
 	            </div>
-	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
+	            <div class="web col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
-	                    <img class="img-responsive" src="static/images/thumbnails/minecraft.jpg" alt="Social Minecraft Website">
-	                    <a href="static/images/minecraft.jpg" data-title="Social Minecraft" data-lightbox="portfolio">
+	                    <img class="img-responsive" src="static/images/thumbnails/minecraft.jpg" alt="Social Minecraft">
+	                    <a href="static/images/thumbnails/minecraft.jpg" data-title="Social Minecraft" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -75,10 +82,10 @@
 	            	</div>
 	            </div>
 
-	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
+	            <div class="other col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
-	                    <img class="img-responsive" src="static/images/thumbnails/step.jpg" alt="Step - Responsive Tiles">
-	                    <a href="static/images/step.jpg" data-title="Step - Responsive Tiles" data-lightbox="portfolio">
+	                    <img class="img-responsive" src="static/images/thumbnails/step.jpg" alt="Responsive Tiles">
+	                    <a href="static/images/thumbnails/step.jpg" data-title="Responsive Tiles" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -89,10 +96,10 @@
 						</a>
 	            	</div>
 	            </div>
-	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
+	            <div class="other col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/stretch-warp.jpg" alt="Stretch / Warp">
-	                    <a href="static/images/stretch-warp.jpg" data-title="Stretch / Warp" data-lightbox="portfolio">
+	                    <a href="static/images/thumbnails/stretch-warp.jpg" data-title="Stretch / Warp" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -106,7 +113,7 @@
 	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/fabric3.png" alt="Graphic Design">
-	                    <a href="static/images/fabric3.png" data-title="Graphic Design" data-lightbox="portfolio">
+	                    <a href="static/images/thumbnails/fabric3.png" data-title="Graphic Design" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -121,7 +128,7 @@
 	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/fabric.png" alt="Graphic Design">
-	                    <a href="static/images/fabric.png" data-title="Graphic Design" data-lightbox="portfolio">
+	                    <a href="static/images/thumbnails/fabric.png" data-title="Graphic Design" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -135,7 +142,7 @@
 	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/braddock.jpg" alt="Architecture">
-	                    <a href="static/images/braddock.jpg" data-title="Architecture" data-lightbox="portfolio">
+	                    <a href="static/images/thumbnails/braddock.jpg" data-title="Architecture" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -146,10 +153,10 @@
 						</a>
 	            	</div>
 	            </div>
-	            <div class="graphic col-md-4 col-sm-6 portfolio-item portbox">
+	            <div class="other col-md-4 col-sm-6 portfolio-item portbox">
             		<div class="port-thumb overlay-image view-overlay">  
 	                    <img class="img-responsive" src="static/images/thumbnails/olympic-suits.jpg" alt="Synchronized Swimming Suits">
-	                    <a href="static/images/olympic-suits.jpg" data-title="Synchronized Swimming Suits" data-lightbox="portfolio">
+	                    <a href="static/images/thumbnails/olympic-suits.jpg" data-title="Synchronized Swimming Suits" data-lightbox="portfolio">
 	                    	<div class="mask team_quote">
 								<div class="port-zoom-link">
 									<h3>
@@ -160,6 +167,7 @@
 						</a>
 	            	</div>
 	            </div>
+
 
 
                 
