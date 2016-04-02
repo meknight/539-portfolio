@@ -537,7 +537,6 @@ section button.submit {
 }
 
 section button.submit:hover,
-section button.submit:active,
 section button.submit:focus {
     background-color: #fed136;
     color: #fff;
@@ -551,6 +550,10 @@ section button.submit:focus {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+}
+section button.submit:active {
+    background-color: #fed136;
+    color: #fff;
 }
 
 
