@@ -116,11 +116,12 @@ span.divider.center {
     text-transform: none;
     color: #fff;
 }
-.jumbotron .container h1 {
+.jumbotron .container h2 {
     font-weight: 700;
-    line-height: 30px;  
+    line-height: 30px;
+    font-size: 48px;  
 }
-.jumbotron .container h1 span {
+.jumbotron .container h2 span {
     font-weight: 300;
 }
 .jumbotron .container h3 {
@@ -139,13 +140,15 @@ a:active {
     color: #fed136;
     text-decoration: none;
 }
-.title h2{
+.title h1{
     text-align: center;
     margin-top: 50px;
+    font-size: 30px;
 }
-.title-2 h2{
+.title-2 h1{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 30px;
 }
 p.description {
     text-align: center;
@@ -159,7 +162,7 @@ p.description-contact {
     margin-bottom: 30px;
     margin-top: -20px;
 }
-header h2 {
+header h1 {
     text-align: center;
 }
 .top-push {
@@ -638,6 +641,9 @@ section button.submit:focus {
     .phone {
         display: none;
     } 
+    .jumbotron .container h2 {
+    font-size: 68px;  
+    }
 }
 @media (min-width:480px) and (max-width:768px) {
     .desktop,
@@ -646,6 +652,9 @@ section button.submit:focus {
     }
     .desktop-phone {
         display: none;
+    }
+    .jumbotron .container h2 {
+    font-size: 60px;  
     }
 }
 @media (max-width:480px) {
